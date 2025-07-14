@@ -24,15 +24,20 @@ docker build -t pytorch-ssh .
 
 🧰 Run the Container
 
+```bash
 docker run -d --gpus all -p 2222:22 --name pytorch-container pytorch-ssh
+```
 
 This maps the container's SSH port to host port 2222.
 
 🔑 Connect via SSH
 
+```bash
 ssh root@localhost -p 2222
+```
 
-Password: rootpasswordYou can change the password in the Dockerfile.
+Password: rootpassword
+You can change the password in the Dockerfile.
 
 🧪 Python and Conda
 
